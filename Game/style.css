@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.background{
+    background-image: url(OIP.jfif);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size:100% 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+.player{
+    background-image: url(player.png);
+    background-repeat: no-repeat;
+    height: 122px;
+    width: 132px;
+    position: absolute;
+    background-size: cover;
+    left: 110px;
+    bottom: 0px;
+}
+.obstecal{
+    background-image: url(obstecal.png);
+    background-repeat: no-repeat;
+    height: 117px;
+    width: 217px;
+    position: absolute;
+    background-size: cover;
+    left: 70vw;
+    bottom: 0px;
+}
+.gameOver{
+    padding-top: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 45px;
+    font-weight: bold;
+    visibility: hidden;
+    text-align: center;
+    position: relative;
+}
+#scores{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top:50px ;
+}
+
+
+
+.obstecalMove{
+    animation: obstecalMove 6s linear infinite;
+}
+.animatePlayer{
+    animation: UpDown 0.9s linear;
+}
+
+@keyframes UpDown{
+    0%{
+        bottom: 0;
+    } 
+    50%{
+        bottom: 400px;
+    }
+    100%{
+       
+        bottom: 0;
+    }
+}
+
+@keyframes obstecalMove{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
